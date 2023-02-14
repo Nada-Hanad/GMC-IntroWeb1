@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(20, 20, 20);
+}
+.image img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 5px solid pink;
+}
+.bio {
+  height: 250px;
+  width: 500px;
+  border-radius: 15px;
+  padding: 16px;
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  border: 2px solid grey;
+  color: white;
+  backdrop-filter: blur(10px);
+  gap: 16px;
+}
+.card {
+  position: relative;
+  width: 60vw;
+  padding-left: 6vw;
+  display: flex;
+  justify-content: flex-start;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px !important;
+  width: 100vw !important;
+  display: grid;
+  place-items: center;
+}

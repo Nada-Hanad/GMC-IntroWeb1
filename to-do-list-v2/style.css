@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+.add-task {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+}
+.text {
+  padding: 16px;
+  width: 70%;
+  border-radius: 8px;
+  border: 2px solid lightpink;
+}
+.button {
+  width: 20%;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: lightpink;
+  color: white;
+  font-size: 18px;
+}
+.tasks-container {
+  height: 70vh;
+  width: 60vw;
+  border: 2px solid lightpink;
+  border-radius: 8px;
+  padding: 8px;
+}
+.task {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightpink;
+  border-radius: 8px;
+  padding: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.task .checkbox {
+  height: 20px;
+  width: 20px;
+}
+.task p {
+  position: relative;
+}
+/* .task.active p {
+  text-decoration: line-through;
+} */
+
+/* .task::after elle va creer une div, juste apres la div task */
+
+.task p::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: all 2s ease;
+}
+.task.active p::after {
+  width: 100%;
+}

@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  height: 300vh;
+  background-color: #e2e2e2;
+  padding-top: 64px;
+}
+nav {
+  height: 64px;
+  width: 100vw;
+  background-color: rgb(139, 139, 194);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  position: fixed;
+  top: 0;
+}
+nav i {
+  font-size: 32px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  z-index: 0;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+.bar {
+  height: 2px;
+  width: 40px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.5s ease;
+}
+.bar:last-child {
+  margin-bottom: 0;
+}
+.menu {
+  display: none;
+}
+.change-theme {
+  padding: 8px 16px;
+  background-color: rgb(165, 216, 236);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.dark {
+  background-color: darkblue !important;
+}
+
+.cart-button {
+  height: 64px;
+  width: 64px;
+  background-color: rgb(36, 211, 217);
+  border-radius: 50%;
+  position: fixed;
+  top: 74px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.cart-modal {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 8px;
+  position: fixed;
+  top: 138px;
+  right: 88px;
+  transition: all 0.5s ease;
+}
+.cart-modal.active {
+  height: 500px;
+  width: 50vw;
+}
+.cart-button:hover {
+  background-color: black;
+  color: rgb(36, 211, 217);
+}
+@media screen and (max-width: 1024px) {
+  .menu {
+    display: block;
+  }
+  nav ul {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(139, 139, 194);
+    position: fixed;
+    top: 64px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+  }
+  nav ul.active {
+    transform: translateX(0);
+  }
+  nav ul.active ~ .menu .bar:first-child {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  nav ul.active ~ .menu .bar:last-child {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+  nav ul.active ~ .menu .bar:nth-child(2) {
+    background-color: transparent;
+  }
+}

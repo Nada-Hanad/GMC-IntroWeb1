@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e7b7e3;
+  background-image: linear-gradient(
+    43deg,
+    #e7b7e3 0%,
+    #c4e6e9 46%,
+    #f9b89c 100%
+  );
+
+  gap: 30px;
+}
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.card {
+  height: 520px;
+  width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  position: relative;
+}
+.card i {
+  font-size: 50px;
+}
+.card p {
+  color: rgb(200, 200, 200);
+}
+
+.card:nth-child(1) {
+  background-color: #1eba9e;
+  color: white;
+}
+.arrow {
+  height: 60px;
+  width: 60px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: -30px;
+}
+.arrow i {
+  color: white;
+  font-size: 30px;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.container .div {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  z-index: 99;
+  border-radius: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .div:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 500px;
+
+  background: conic-gradient(pink, pink);
+  animation: spin 1.5s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.container .div:nth-child(1)::after {
+  content: "hover me";
+  color: pink;
+  background: white;
+  border-radius: 2rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 295px;
+  height: 495px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .div:nth-child(1):hover {
+  box-shadow: 0 0 50px pink;
+}

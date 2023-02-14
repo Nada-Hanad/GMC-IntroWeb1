@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1600&q=60"
+                alt="profile picture"
+              />
+            </div>
+            <div class="bio">
+              <h3>Title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
+                quod fugit consectetur minus sed eum aut cum, corporis error
+                nobis
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1600&q=60"
+                alt="profile picture"
+              />
+            </div>
+            <div class="bio">
+              <h3>Title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
+                quod fugit consectetur minus sed eum aut cum, corporis error
+                nobis
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1600&q=60"
+                alt="profile picture"
+              />
+            </div>
+            <div class="bio">
+              <h3>Title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
+                quod fugit consectetur minus sed eum aut cum, corporis error
+                nobis
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        loop: true,
+        autoplay: {
+          delay: 1000,
+        },
+        speed: 2000,
+        pauseOnMouseEnter: true,
+      });
+    </script>
+  </body>
+</html>

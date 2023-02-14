@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  width: 100vw;
+}
+nav {
+  height: 64px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+nav i {
+  font-size: 30px;
+}
+.line {
+  height: 3px;
+  width: 40px;
+  background-color: black;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.menu {
+  display: none;
+}
+.line:last-child {
+  margin-bottom: 0;
+}
+
+.home {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.right img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.right,
+.left {
+  display: flex;
+
+  flex-direction: column;
+}
+.left {
+  width: 40%;
+  gap: 30px;
+}
+.right {
+  align-items: center;
+  justify-content: center;
+}
+.left input {
+  height: 40px;
+  width: 200px;
+  background-color: #ff6464;
+  border: none;
+  color: white;
+  font-size: medium;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.21);
+}
+.posts {
+  height: 50vh;
+  width: 100vw;
+  background-color: #ff6464;
+  display: flex;
+
+  overflow-x: scroll;
+}
+.cards {
+  display: flex;
+}
+.card {
+  height: 300px;
+  width: 400px;
+  background-color: bisque;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .home {
+    flex-direction: column-reverse;
+    height: fit-content;
+    gap: 50px;
+  }
+  .left {
+    width: 70%;
+    align-items: center;
+    text-align: center;
+  }
+}

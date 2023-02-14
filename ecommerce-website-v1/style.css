@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.cart-button {
+  height: 80px;
+  width: 80px;
+  background-color: violet;
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.cart-button i {
+  font-size: 40px;
+}
+.cart-button:hover {
+  background-color: black;
+  color: violet;
+}
+.cart-items {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease;
+  background-color: white;
+  z-index: 1;
+}
+
+.cart-items.active {
+  height: 700px;
+  width: 600px;
+  padding: 8px;
+}
+.product {
+  width: 400px;
+  height: 550px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.25);
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 32px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 20vh;
+}
+.product img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.item-info {
+  padding: 16px;
+  display: flex;
+
+  height: 40%;
+  flex-direction: column;
+  position: relative;
+}
+.buy {
+  padding: 8px 16px;
+  width: fit-content;
+  border-radius: 16px;
+  border: 1px solid violet;
+  position: absolute;
+  bottom: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.buy:hover {
+  background-color: violet;
+}
+.item-bought {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(238, 130, 238, 0.338);
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 8px;
+}
+.cart-items-number {
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+.cart-item {
+  width: 100%;
+  background-color: rgb(214, 173, 181);
+  border-radius: 8px;
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.quantity {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
